@@ -104,6 +104,13 @@ Energy Pricing `[nrg_pc_204]`
 
 **Analytics performed**: systematic missing-data audit, trend analysis, correlation analysis, trailing 5-year boxplot with median thresholding, cross-national benchmarking.
 
+## :large_orange_diamond: AI-augumented Workflow
+
+The project was built through an **AI-augmented workflow**, using the `Cursor IDE` and `Claude`. Data extraction, preprocessing, and analytical figure logic were written by the Author and optimized by Cursor. Presentation layer (Streamlit, CSS branding, HTML rendering, code refactoring) were implemented by Cursor under the following rules:
+- **Author-driven design decisions**: All visual design choices (e.g, color palette, layout proportions, typography), content, and analytics (e.g, how to group RES Shares) originated from the Author;
+- **AI-assisted implementation**: Cursor translated high-level instructions into working code, handling the CSS specificity with Streamlit's internal styles, HTML templating, and Matplotlib API details;
+- **Continuous review**: The Author verified every change and provided feedback. The Author also **made direct edits to the Streamlit code independently** between Cursor sessions. Large structural improvements were first proposed by Cursor, then selectively approved or rejected by the Author before implementation.
+
 ## :large_orange_diamond: Objectives
 
 1. Extract Eurostat datasets via the official JSON-stat API, scrape country-code mappings and dataset metadata, then harmonize and merge into a single wide CSV indexed by country and year.
@@ -127,13 +134,6 @@ Energy Pricing `[nrg_pc_204]`
 - Ready-to-use and clear dashboard to support data-driven discussions and decisions.
 
 :part_alternation_mark: Policy-relevant insights for lobbyists, policymakers and publicists interested in EU renewal energy sources transformation.
-
-## :large_orange_diamond: AI-augumented Workflow
-
-The project was built through an **AI-augmented workflow**, using the `Cursor IDE` and `Claude`. Data extraction, preprocessing, and analytical figure logic were written by the Author and optimized by Cursor. Presentation layer (Streamlit, CSS branding, HTML rendering, code refactoring) were implemented by Cursor under the following rules:
-- **Author-driven design decisions**: All visual design choices (e.g, color palette, layout proportions, typography), content, and analytics (e.g, how to group RES Shares) originated from the Author;
-- **AI-assisted implementation**: Cursor translated high-level instructions into working code, handling the CSS specificity with Streamlit's internal styles, HTML templating, and Matplotlib API details;
-- **Continuous review**: The Author verified every change and provided feedback. The Author also **made direct edits to the Streamlit code independently** between Cursor sessions. Large structural improvements were first proposed by Cursor, then selectively approved or rejected by the Author before implementation.
 
 ### Limitations & Challenges
 
