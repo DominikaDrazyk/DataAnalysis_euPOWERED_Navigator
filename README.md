@@ -22,7 +22,7 @@ Select the path that best matches your interest:
 **1. Executive & Business Insight** <br>
 *For reviewers focused on storytelling, strategy, and end-results.*
 
-- :arrow_forward: [The euPOWERED Navigator](https://eupowered-navigator-2026.streamlit.app/)
+- :arrow_forward: [The euPOWERED Navigator](https://eupowered-navigator-2026.streamlit.app/): a ready-to-use interactive dashboard;
 
 - [PDF Presentation](./reports/euPOWERED_Navigator_presentation.pdf): a step-by-step walkthrough of the project’s assumptions, technical execution highlights, and business insights;
 
