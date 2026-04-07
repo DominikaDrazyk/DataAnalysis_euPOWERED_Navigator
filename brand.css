@@ -1,0 +1,327 @@
+/* euPOWERED Navigator — brand tokens & widget overrides.
+ * Loaded once by dashboard.py; replaces all inline <style> blocks.
+ *
+ * Colour reference (Streamlit Emotion is overridden via specificity):
+ *   surface   #042125   page / app shell background
+ *   selected  #004c51   segmented radio pressed fill
+ *   unpressed #395e65   buttons, multiselect field, dividers
+ *   accent    #b4b63b   nav primary, radio marks, multiselect tags
+ */
+
+:root {
+    --brand-surface: #042125;
+    --brand-selected: #004c51;
+    --brand-unpressed: #808E90;
+    --brand-accent: #b4b63b;
+    --brand-text: rgba(255, 255, 255, 0.92);
+    --brand-text-dim: rgba(255, 255, 255, 0.88);
+    --desc-popover-font-size: 14pt;   /* chooser label (19 pt) − 5 */
+}
+
+/* ── App shell ──────────────────────────────────────────── */
+
+html body .stApp,
+html body [data-testid="stAppViewContainer"],
+html body [data-testid="stHeader"],
+html body section[data-testid="stMain"] > div {
+    background-color: var(--brand-surface) !important;
+}
+
+html body .stApp {
+    color: var(--brand-text) !important;
+}
+
+html body .stApp a:link,
+html body .stApp a:visited {
+    color: var(--brand-accent) !important;
+}
+
+/* ── Popover (figure description) ───────────────────────── */
+
+html body .stApp [data-testid="stPopoverBody"] {
+    background-color: #000000 !important;
+    color: var(--brand-text) !important;
+    border: 2pt solid #000000 !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: fit-content !important;
+    max-width: min(32rem, 92vw) !important;
+}
+
+html body .stApp div:has(> [data-testid="stPopoverBody"]) {
+    background-color: #000000 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+html body .stApp [data-testid="stPopoverBody"] a:link,
+html body .stApp [data-testid="stPopoverBody"] a:visited {
+    color: var(--brand-accent) !important;
+}
+
+html body .stApp [data-testid="stPopoverBody"] [data-testid="stMarkdownContainer"] {
+    color: var(--brand-text) !important;
+    background-color: transparent !important;
+}
+
+html body section[data-testid="stMain"] [data-testid="stWidgetLabel"] {
+    color: var(--brand-text-dim) !important;
+}
+
+/* ── Nav / primary buttons ──────────────────────────────── */
+
+html body .stApp button[data-testid="stBaseButton-primary"],
+html body .stApp div[data-testid="stButton"] button[data-testid="stBaseButton-primary"] {
+    background: var(--brand-accent) !important;
+    background-color: var(--brand-accent) !important;
+    background-image: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    color: var(--brand-surface) !important;
+}
+
+html body .stApp button[data-testid="stBaseButton-secondary"],
+html body .stApp button[data-testid="stBaseButton-tertiary"] {
+    background: var(--brand-unpressed) !important;
+    background-color: var(--brand-unpressed) !important;
+    background-image: none !important;
+    color: var(--brand-text) !important;
+}
+
+/* ── Multiselect ────────────────────────────────────────── */
+
+html body .stApp [data-testid="stMultiSelect"] [data-baseweb="select"],
+html body .stApp [data-testid="stMultiSelect"] [data-baseweb="select"]:focus-within,
+html body .stApp [data-testid="stMultiSelect"] [data-baseweb="select"]:active,
+html body .stApp [data-testid="stMultiSelect"] [data-baseweb="select"]:focus {
+    background-color: var(--brand-unpressed) !important;
+    border: 2px solid var(--brand-unpressed) !important;
+    border-radius: 0.5rem !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+html body .stApp [data-testid="stMultiSelect"] [data-baseweb="select"] > div,
+html body .stApp [data-testid="stMultiSelect"] [data-baseweb="select"]:focus-within > div {
+    background-color: var(--brand-unpressed) !important;
+    border-radius: 0.5rem !important;
+    border-color: var(--brand-unpressed) !important;
+}
+
+html body .stApp [data-testid="stMultiSelect"] [data-baseweb="popover"],
+html body .stApp [data-testid="stMultiSelect"] [data-baseweb="popover"] > div,
+html body .stApp [data-testid="stMultiSelect"] ul[role="listbox"] {
+    background-color: var(--brand-unpressed) !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+}
+
+html body .stApp [data-testid="stMultiSelect"] [data-baseweb="tag"] {
+    background-color: var(--brand-accent) !important;
+    color: var(--brand-surface) !important;
+    box-shadow: inset 0 0 0 1px rgba(4, 33, 37, 0.22) !important;
+}
+
+html body .stApp [data-testid="stMultiSelect"] [data-baseweb="tag"] svg,
+html body .stApp [data-testid="stMultiSelect"] [data-baseweb="tag"] path {
+    fill: var(--brand-surface) !important;
+}
+
+html body .stApp [data-testid="stMultiSelect"] input {
+    background-color: transparent !important;
+    color: var(--brand-text) !important;
+}
+
+/* ── Radio buttons (metric chooser) ─────────────────────── */
+
+html body .stApp div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"],
+html body .stApp div[data-testid="stRadio"] label[data-baseweb="radio"] {
+    outline: none !important;
+}
+
+html body .stApp div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"] input[type="radio"],
+html body .stApp div[data-testid="stRadio"] label[data-baseweb="radio"] input[type="radio"] {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+html body .stApp div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"] div,
+html body .stApp div[data-testid="stRadio"] label[data-baseweb="radio"] div {
+    box-shadow: none !important;
+}
+
+/* unchecked — outer */
+html body .stApp div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"]:not(:has(input:checked)) > div:has(+ input[type="radio"]),
+html body .stApp div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"]:not(:has(input:checked)) > div > div:has(+ input[type="radio"]),
+html body .stApp div[data-testid="stRadio"] label[data-baseweb="radio"]:not(:has(input:checked)) > div:has(+ input[type="radio"]),
+html body .stApp div[data-testid="stRadio"] label[data-baseweb="radio"]:not(:has(input:checked)) > div > div:has(+ input[type="radio"]) {
+    background-color: var(--brand-unpressed) !important;
+    background-image: none !important;
+    border: 2px solid var(--brand-unpressed) !important;
+    outline: none !important;
+}
+
+/* unchecked — inner */
+html body .stApp div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"]:not(:has(input:checked)) > div:has(+ input[type="radio"]) > div,
+html body .stApp div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"]:not(:has(input:checked)) > div > div:has(+ input[type="radio"]) > div,
+html body .stApp div[data-testid="stRadio"] label[data-baseweb="radio"]:not(:has(input:checked)) > div:has(+ input[type="radio"]) > div,
+html body .stApp div[data-testid="stRadio"] label[data-baseweb="radio"]:not(:has(input:checked)) > div > div:has(+ input[type="radio"]) > div {
+    background-color: var(--brand-unpressed) !important;
+    background-image: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* checked — outer */
+html body .stApp div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"]:has(input:checked) > div:has(+ input[type="radio"]),
+html body .stApp div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"]:has(input:checked) > div > div:has(+ input[type="radio"]),
+html body .stApp div[data-testid="stRadio"] label[data-baseweb="radio"]:has(input:checked) > div:has(+ input[type="radio"]),
+html body .stApp div[data-testid="stRadio"] label[data-baseweb="radio"]:has(input:checked) > div > div:has(+ input[type="radio"]) {
+    background-color: var(--brand-accent) !important;
+    background-image: none !important;
+    border: 2px solid var(--brand-accent) !important;
+    outline: none !important;
+}
+
+/* checked — inner dot */
+html body .stApp div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"]:has(input:checked) > div:has(+ input[type="radio"]) > div,
+html body .stApp div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"]:has(input:checked) > div > div:has(+ input[type="radio"]) > div,
+html body .stApp div[data-testid="stRadio"] label[data-baseweb="radio"]:has(input:checked) > div:has(+ input[type="radio"]) > div,
+html body .stApp div[data-testid="stRadio"] label[data-baseweb="radio"]:has(input:checked) > div > div:has(+ input[type="radio"]) > div {
+    background-color: var(--brand-surface) !important;
+    background-image: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* segmented / button-style radios */
+html body .stApp div[data-testid="stRadio"] button[aria-checked="false"] {
+    background: var(--brand-unpressed) !important;
+    background-color: var(--brand-unpressed) !important;
+    background-image: none !important;
+    color: var(--brand-text-dim) !important;
+}
+
+html body .stApp div[data-testid="stRadio"] button[aria-checked="true"] {
+    background: var(--brand-selected) !important;
+    background-color: var(--brand-selected) !important;
+    background-image: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    color: var(--brand-text) !important;
+}
+
+/* ── st.pyplot images ───────────────────────────────────── */
+
+html body .stApp [data-testid="stImage"] img {
+    display: block;
+}
+
+/* ── Buttons & popover chrome ───────────────────────────── */
+
+html body .stApp div[data-testid="stButton"] button,
+html body .stApp [data-testid="stPopoverButton"],
+html body .stApp div[data-testid="stRadio"] button {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+html body .stApp [data-testid="stPopoverButton"] {
+    background: var(--brand-unpressed) !important;
+    background-color: var(--brand-unpressed) !important;
+    background-image: none !important;
+    color: var(--brand-text) !important;
+}
+
+/* ── Dividers ───────────────────────────────────────────── */
+
+html body section[data-testid="stMain"] hr,
+html body [data-testid="stMain"] hr {
+    border: none !important;
+    height: 2px !important;
+    background-color: var(--brand-unpressed) !important;
+    opacity: 1 !important;
+    margin: 0.75rem 0 !important;
+}
+
+.dash-figure-rule-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem 0;
+    box-sizing: border-box;
+}
+
+.dash-figure-rule {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 2px !important;
+    width: 66.67% !important;
+    max-width: 100% !important;
+    background-color: var(--brand-unpressed) !important;
+    opacity: 1 !important;
+}
+
+/* ── Metric radio sizing ────────────────────────────────── */
+
+html body div[data-testid="stRadio"] button {
+    font-size: calc(1rem + 2pt) !important;
+    line-height: 1.35 !important;
+    min-height: 2.5rem !important;
+    padding: 0.4rem 0.85rem !important;
+}
+
+html body div[data-testid="stRadio"] label[data-baseweb="radio"] {
+    font-size: calc(1rem + 2pt) !important;
+    line-height: 1.35 !important;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+}
+
+html body div[data-testid="stRadio"] label[data-baseweb="radio"] p {
+    font-size: calc(1rem + 2pt) !important;
+}
+
+html body div[data-testid="stRadio"] div[role="radiogroup"] {
+    gap: 0.6rem !important;
+    align-items: center !important;
+}
+
+html body div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"] > div:has(+ input[type="radio"]),
+html body div[data-testid="stRadio"] [data-testid="stRadioGroup"] label[data-baseweb="radio"] > div > div:has(+ input[type="radio"]),
+html body div[data-testid="stRadio"] label[data-baseweb="radio"] > div:has(+ input[type="radio"]),
+html body div[data-testid="stRadio"] label[data-baseweb="radio"] > div > div:has(+ input[type="radio"]) {
+    transform: scale(1.2);
+    transform-origin: center left;
+}
+
+/* ── Figure description popover copy ────────────────────── */
+
+.figure-desc-popover-copy {
+    font-size: var(--desc-popover-font-size) !important;
+    line-height: 1.45 !important;
+    font-weight: 400 !important;
+    text-align: justify !important;
+    text-justify: inter-word;
+    max-width: min(28rem, 88vw);
+    margin: 0 !important;
+    padding: 0.2rem 0 0.4rem 0 !important;
+    color: var(--brand-text) !important;
+}
+
+.figure-desc-popover-copy code {
+    font-size: 0.9em !important;
+    font-family: inherit;
+    font-weight: 500;
+    color: var(--brand-accent) !important;
+}
