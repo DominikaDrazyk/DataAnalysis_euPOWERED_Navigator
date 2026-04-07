@@ -250,17 +250,17 @@ def _build_sources_content() -> str:
         "<p>The dashboard is powered by robust, open-access data retrieved from the "
         "Eurostat Data Browser via the official API. <br>Three primary datasets "
         "form the backbone of the analysis:</p>"
-        f'<p><a href="https://ec.europa.eu/eurostat/databrowser/view/ten00124/" target="_blank" '
+        f'<p><a href="https://ec.europa.eu/eurostat/databrowser/view/ten00124/" target="_blank" rel="noopener noreferrer" '
         f'style="color:inherit;text-decoration:none;"><code style="color:{_accent};font-weight:700;">[ten00124]</code></a> '
         f'<span style="font-weight:700;">Final energy consumption by sector</span>: '
         "<br>provides annual data on the energy end-use across industrial and residential segments;"
         f"{_updated_line('ten00124')}</p>"
-        f'<p><a href="https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/" target="_blank" '
+        f'<p><a href="https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/" target="_blank" rel="noopener noreferrer" '
         f'style="color:inherit;text-decoration:none;"><code style="color:{_accent};font-weight:700;">[nrg_ind_ren]</code></a> '
         f'<span style="font-weight:700;">Share of energy from renewable sources</span>: '
         "<br>official monitoring indicators for EU renewable energy targets, detailing "
         f"penetration across specific economic sectors;{_updated_line('nrg_ind_ren')}</p>"
-        f'<p><a href="https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_204/" target="_blank" '
+        f'<p><a href="https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_204/" target="_blank" rel="noopener noreferrer" '
         f'style="color:inherit;text-decoration:none;"><code style="color:{_accent};font-weight:700;">[nrg_pc_204]</code></a> '
         f'<span style="font-weight:700;">Electricity prices for household consumers (bi-annual)</span>: '
         "<br>tracks the evolution of energy costs for the medium-sized consumer segment, including "
