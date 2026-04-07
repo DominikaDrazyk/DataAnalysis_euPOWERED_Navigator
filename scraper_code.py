@@ -17,7 +17,7 @@ import os
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_PATH = os.path.join(BASE_DIR, "..", "data")
+DATA_PATH = os.path.join(BASE_DIR, "data")
 
 YEAR_MIN = 2015
 YEAR_MAX = 2024
@@ -201,7 +201,7 @@ def extract_metadata():
         columns=["dataset_id", "dataset_source", "dataset_title", "dataset_last_updated"],
     )
     meta.to_csv(os.path.join(DATA_PATH, "scraper_metadata.csv"), encoding="utf-8", index=False)
-    print("✓ Metadata saved: ../data/scraper_metadata.csv")
+    print("✓ Metadata saved: data/scraper_metadata.csv")
     print()
 
 
@@ -318,7 +318,7 @@ def main():
 
     wide = build_wide_dataset(ten, ren, pc204, geo_to_country)
     wide.to_csv(os.path.join(DATA_PATH, "scraper_data.csv"), index=False, encoding="utf-8")
-    print("✓ Saved: ../data/scraper_data.csv")
+    print("✓ Saved: data/scraper_data.csv")
 
 
 if __name__ == "__main__":

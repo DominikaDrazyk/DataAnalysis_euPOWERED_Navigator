@@ -12,10 +12,10 @@ import os
 
 # Paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-FONT_PATH = os.path.join(BASE_DIR, '..', 'assets', 'fonts', 'Ubuntu-Regular.ttf')
+FONT_PATH = os.path.join(BASE_DIR, 'assets', 'fonts', 'Ubuntu-Regular.ttf')
 STYLE_PATH = os.path.join(BASE_DIR, 'custom.mplstyle')
-FIGURES_PATH = os.path.join(BASE_DIR, '..', 'figures')
-DATA_PATH = os.path.join(BASE_DIR, '..', 'data')
+FIGURES_PATH = os.path.join(BASE_DIR, 'figures')
+DATA_PATH = os.path.join(BASE_DIR, 'data')
 
 pd.options.display.precision = 3
 plt.style.use(STYLE_PATH)

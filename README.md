@@ -29,11 +29,11 @@ Select the path that best matches your interest:
 **2. Technical Deep-Dive & Audit** <br>
 *For reviewers interested in the full analytical process and data interpretation.*
 
-- [Codes](./codes/): production-ready data scraping, preprocessing and analysis scripts:
-    - [Scraper code](./py_codes/scraper_code.py): script for Eurostat datasets and metadata scraping;
-    - [Preprocessing code](./py_codes/preproc_code.py): script for preprocessing and a systematic missing-data audit;
-    - [Figure code](./py_codes/figures.py): script generating styled, publication-ready figures;
-    - [Dashboard code](./py_codes/dashboard.py): script rendering a three-page dashboard.
+- Codes: production-ready data scraping, preprocessing and analysis scripts:
+    - [Scraper code](scraper_code.py): script for Eurostat datasets and metadata scraping;
+    - [Preprocessing code](preproc_code.py): script for preprocessing and a systematic missing-data audit;
+    - [Figures code](figures.py): script generating styled, publication-ready figures;
+    - [Dashboard code](dashboard.py): script rendering a three-page dashboard.
 
 :eight_spoked_asterisk: **Dependency Management** <br>
 A strictly defined environment manifest ensuring 100% reproducibility and security. Please, follow those steps in case you would like to run the code on your local machine: 

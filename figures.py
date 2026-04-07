@@ -15,9 +15,9 @@ import seaborn as sns
 # --- Paths & style ---------------------------------------------------------
 
 _HERE = Path(__file__).resolve().parent
-FONT_PATH = _HERE.parent / "assets" / "fonts" / "Ubuntu-Regular.ttf"
+FONT_PATH = _HERE / "assets" / "fonts" / "Ubuntu-Regular.ttf"
 STYLE_PATH = _HERE / "custom.mplstyle"
-DATA_PATH = _HERE.parent / "data"
+DATA_PATH = _HERE / "data"
 
 # Sectoral REN lines for Figure 3 (total economy-wide REN Share is omitted)
 REN_METRICS = [

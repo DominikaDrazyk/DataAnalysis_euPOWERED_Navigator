@@ -26,7 +26,7 @@ from figures import (
 )
 
 _HERE = Path(__file__).resolve().parent
-DATA_PATH = _HERE.parent / "data"
+DATA_PATH = _HERE / "data"
 PREPROCESSED_CSV = "preprocessed_data.csv"
 _CSS_PATH = _HERE / "brand.css"
 
@@ -664,7 +664,7 @@ def main() -> None:
         st.error(f"Missing data file: `{PREPROCESSED_CSV}`")
         st.info(
             "Run the preprocessing pipeline first, for example:\n\n"
-            "`python py_codes/preproc_code.py`"
+            "`python preproc_code.py`"
         )
         return
 
