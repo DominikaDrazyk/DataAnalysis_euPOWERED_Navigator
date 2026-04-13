@@ -6,10 +6,10 @@
 I am a Doctor of Neuroscience with strong experience in data analysis, statistical modelling and research design. I focus on translating complex data into actionable insights for business and policy. I enjoy data wrangling, visualization, and project management.
 
 **Skills & tools:** 
-- advanced **R**, advanced **Python** (*pandas*, *NumPy*, *matplotlib*, *seaborn*, *scipy*) - see my [Python portfolio project](https://github.com/DominikaDrazyk/DataAnalysis_Efficiency_and_Diversity), 
-- developing my skills in **Power BI** and **Power Apps** - see my [PowerBI portfolio project](https://github.com/DominikaDrazyk/DataAnalysis_Consultant_Dashboard),
-- developing my skills in **SQL** (**ETL**, **PostgreSQL**, **pgAdmin4**, **DBeaver**) - see my [SQL portfolio project](https://github.com/DominikaDrazyk/DataAnalysis_eCommerce_Audit),
-- comfortable managing **AI-augmented workflow**, leveraging *Cursor IDE* and *Claude* while ensuring code integrity through manual review - read along for more information,
+- advanced **R**, advanced **Python** (*pandas*, *NumPy*, *matplotlib*, *seaborn*, *scipy*), 
+- developing my skills in **Power BI** and **Power Apps**,
+- developing my skills in **SQL** (**ETL**, **PostgreSQL**, **pgAdmin4**, **DBeaver**),
+- comfortable managing **AI-augmented workflow**, leveraging *Cursor IDE* and *Claude*,
 - technical documentation in **Jupyter Notebook** (*Markdown* syntax), version control in **Git**.
 
 &emsp; **Contact**: dominika.a.drazyk@gmail.com <br> 
@@ -90,6 +90,27 @@ An end-to-end data analytics project that scrapes, harmonizes, and visualizes a 
 
 - :part_alternation_mark: Policy-relevant insights for lobbyists, policymakers and publicists interested in EU renewal energy sources transformation.
 
+### :large_orange_diamond: Objectives
+
+1. Extract Eurostat datasets via the official JSON-stat API, scrape country-code mappings and dataset metadata, then harmonize and merge into a single wide CSV indexed by country and year.
+<br> Code: `scraper_code.py`
+
+2. Preproces the wide dataset, rename dimension codes to analyst-friendly labels, convert time formats, run a systematic missing-data audit with diagnostic visualizations, export the dashboard-ready CSV.
+<br> Code: `preproc_code.py`
+
+3. Return styled, publication-ready figures using a custom font, color palette, and shared matplotlib stylesheet.
+<br> Code: `figures.py` 
+
+4. Drive a Streamlit application that renders six interactive analytical figures with per-figure country selection and metric toggles, a Data Model reference section with methodology and variable documentation, and an About page — all styled through a centralized CSS design system.
+<br> Code: `dashboard.py`
+
+### AI-augumented Workflow
+
+The project was built through an **AI-augmented workflow**, using the `Cursor IDE` and `Claude`. Data extraction, preprocessing, and analytical figure logic were written by the Author and optimized by Cursor. Presentation layer (Streamlit, CSS branding, HTML rendering, code refactoring) were implemented by Cursor under the following rules:
+- **Author-driven design decisions**: All visual design choices (e.g, color palette, layout proportions, typography), content, and analytics (e.g, how to group RES Shares) originated from the Author;
+- **AI-assisted implementation**: Cursor translated high-level instructions into working code, handling the CSS specificity with Streamlit's internal styles, HTML templating, and Matplotlib API details;
+- **Continuous review**: The Author verified every change and provided feedback. The Author also **made direct edits to the Streamlit code independently** between Cursor sessions. Large structural improvements were first proposed by Cursor, then selectively approved or rejected by the Author before implementation.
+
 ### Data & Source Metadata
 
 External data sources (EUROSTAT):
@@ -126,28 +147,7 @@ Energy Pricing `[nrg_pc_204]`
 
 **Analytics performed**: systematic missing-data audit, trend analysis, correlation analysis, trailing 5-year boxplot with median thresholding, cross-national benchmarking.
 
-## :large_orange_diamond: AI-augumented Workflow
-
-The project was built through an **AI-augmented workflow**, using the `Cursor IDE` and `Claude`. Data extraction, preprocessing, and analytical figure logic were written by the Author and optimized by Cursor. Presentation layer (Streamlit, CSS branding, HTML rendering, code refactoring) were implemented by Cursor under the following rules:
-- **Author-driven design decisions**: All visual design choices (e.g, color palette, layout proportions, typography), content, and analytics (e.g, how to group RES Shares) originated from the Author;
-- **AI-assisted implementation**: Cursor translated high-level instructions into working code, handling the CSS specificity with Streamlit's internal styles, HTML templating, and Matplotlib API details;
-- **Continuous review**: The Author verified every change and provided feedback. The Author also **made direct edits to the Streamlit code independently** between Cursor sessions. Large structural improvements were first proposed by Cursor, then selectively approved or rejected by the Author before implementation.
-
-## :large_orange_diamond: Objectives
-
-1. Extract Eurostat datasets via the official JSON-stat API, scrape country-code mappings and dataset metadata, then harmonize and merge into a single wide CSV indexed by country and year.
-<br> Code: `scraper_code.py`
-
-2. Preproces the wide dataset, rename dimension codes to analyst-friendly labels, convert time formats, run a systematic missing-data audit with diagnostic visualizations, export the dashboard-ready CSV.
-<br> Code: `preproc_code.py`
-
-3. Return styled, publication-ready figures using a custom font, color palette, and shared matplotlib stylesheet.
-<br> Code: `figures.py` 
-
-4. Drive a Streamlit application that renders six interactive analytical figures with per-figure country selection and metric toggles, a Data Model reference section with methodology and variable documentation, and an About page — all styled through a centralized CSS design system.
-<br> Code: `dashboard.py`
-
-### Limitations & Challenges
+## :large_orange_diamond: Limitations & Challenges
 
 - By design, the pipeline *omits the Commercial and Public Services* (`nrg_bal: FC_OTH_CP_E`). While the Industry, Transport, and Households cover the vast majority of consumption, the Total figures in this dashboard represent this specific subset, not the absolute national total;
 - Pricing data is anchored to the DC Band from 2500 to 4999 kWh (`nrg_cons: KWH2500-4999`). While this represents the median EU household, *it may not reflect the costs faced by low-income households or heavy industrial users* who operate under different tariff structures;
@@ -168,3 +168,14 @@ The project was built through an **AI-augmented workflow**, using the `Cursor ID
 - Translating abstract statistics into a *strategic lobbyist narrative* focused on economic affordability and decarbonization progress.
 - Utilizing *advanced visual analytics*, including multidimensional bubble charts and percentile-based boxplots—to identify high-yield investment opportunities and sectoral bottlenecks.
 - Preparing *comprehensive documentation* to effectively communicate methodology and limitations.
+
+## :large_orange_diamond: Portfolio Gallery
+
+| Project | Business Impact | Key Stack |
+| :--- | :--- | :--- |
+| **[euPOWERED Navigator](https://github.com/DominikaDrazyk/DataAnalysis_euPOWERED_Navigator)** | Policy-driven energy statistics & decarbonization tracking. | Python, Streamlit, Scraping |
+| **[eCommerce Audit](https://github.com/DominikaDrazyk/DataAnalysis_eCommerce_Audit)** | Identifying financial risks and logistical bottlenecks. | PostgreSQL, ETL, Python |
+| **[Consultant Dashboard](https://github.com/DominikaDrazyk/DataAnalysis_Consultant_Dashboard)** | Market viability and competitive landscape engine. | Power BI, DAX, Star Schema |
+| **[Efficiency and Diversity](https://github.com/DominikaDrazyk/DataAnalysis_Efficiency_and_Diversity)** | Statistical research on human capital and spending. | Python, Scraping, Multivariate Stats |
+
+[← Back to Profile](https://github.com/DominikaDrazyk)
