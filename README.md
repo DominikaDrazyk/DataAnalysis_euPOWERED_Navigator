@@ -37,22 +37,33 @@ Select the path that best matches your interest:
     - [Dashboard code](dashboard.py): script rendering a three-page dashboard.
 
 :eight_spoked_asterisk: **Dependency Management** <br>
-A strictly defined environment manifest ensuring 100% reproducibility and security. Please, follow those steps in case you would like to run the code on your local machine: 
+This project uses Poetry to ensure a deterministic environment (locked versions) and 100% reproducibility. For basic users, a standard `requirements.txt` is also maintained.
 
-- **Step 1: Initialize the Virtual Environment**
+- **Option 1: Modern Workflow (Recommended)**
+Use this if you have Poetry installed. This will automatically create a virtual environment and install the exact versions from `poetry.lock`.
 
-*Linux / macOS Bash*
 ```
-python3 -m venv .venv
-source .venv/bin/activate
+# Bash
+# Install dependencies and create virtual environment
+poetry install
+# Activate the environment
+poetry shell
 ```
-*Windows PowerShell*
+
+- **Option 2: Standard Workflow (Pip)**
+Use this for a traditional setup using the provided `requirements.txt`.
+
+1. Initialize the Virtual Environment
 ```
-python -m venv .venv
-.venv\Scripts\activate
+# Linux / macOS
+python3 -m venv .venv && source .venv/bin/activate
+# Windows 
+python -m venv .venv && .venv\Scripts\activate
 ```
-- **Step 2: Install Required Dependencies**
+
+2. Install Dependencies
 ```
+# Bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
@@ -68,6 +79,16 @@ An end-to-end data analytics project that scrapes, harmonizes, and visualizes a 
 - **Test national decarbonization performance**, by direct, evidence-based comparisons between member states.
 
 ![Screenshot of the dashboard welcome page.](/images/Showroom1.png)
+
+### What this project delivers:
+
+- A robust Python scraping and preprocessing pipeline ready for raw data imput and normalization.
+
+- A set of well-documented codes for data visualization, ready for reporting.
+
+- Ready-to-use and clear dashboard to support data-driven discussions and decisions.
+
+- :part_alternation_mark: Policy-relevant insights for lobbyists, policymakers and publicists interested in EU renewal energy sources transformation.
 
 ### Data & Source Metadata
 
@@ -125,16 +146,6 @@ The project was built through an **AI-augmented workflow**, using the `Cursor ID
 
 4. Drive a Streamlit application that renders six interactive analytical figures with per-figure country selection and metric toggles, a Data Model reference section with methodology and variable documentation, and an About page — all styled through a centralized CSS design system.
 <br> Code: `dashboard.py`
-
-### What this project delivers:
-
-- A robust Python scraping and preprocessing pipeline ready for raw data imput and normalization.
-
-- A set of well-documented codes for data visualization, ready for reporting.
-
-- Ready-to-use and clear dashboard to support data-driven discussions and decisions.
-
-:part_alternation_mark: Policy-relevant insights for lobbyists, policymakers and publicists interested in EU renewal energy sources transformation.
 
 ### Limitations & Challenges
 
